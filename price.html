@@ -20,6 +20,14 @@
   <div class="card"><h3>Community Workshops</h3><p>Free / Sponsored</p></div>
 </section>
  <table>
+    <button id="backTop" style="display:none; position:fixed; bottom:20px; right:20px; z-index:999; background:#2563eb; color:white; border:none; padding:12px; border-radius:50%; cursor:pointer">↑</button>
+
+<script>
+window.onscroll = () => {
+  document.getElementById('backTop').style.display = window.scrollY > 400 ? 'block' : 'none';
+}
+document.getElementById('backTop').onclick = () => window.scrollTo({top:0, behavior:'smooth'});
+</script>
 
     <!DOCTYPE html>
 <html lang="en">

@@ -473,4 +473,51 @@ form button {
 form button:hover {
   background: #000dff;
 }
+#img-lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+#img-lightbox.active {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+#img-lightbox.active .lightbox-img {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px; right: 35px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+}
+.lightbox-close:hover { color: #ff4d4d; }
+
+/* Make images show they’re clickable */
+img.clickable {
+  cursor: zoom-in;
+  transition: transform 0.2s;
+}
+img.clickable:hover {
+  transform: scale(1.02);
+}
 

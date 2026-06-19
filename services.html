@@ -21,6 +21,14 @@
     <li><ol><b>INNOVATION SUPPORT:</b>Turn your ideas into practical digital<br>
     solutions with resources and support from Curio Hub</ol></li>
 </ul>
+<button id="backTop" style="display:none; position:fixed; bottom:20px; right:20px; z-index:999; background:#2563eb; color:white; border:none; padding:12px; border-radius:50%; cursor:pointer">↑</button>
+
+<script>
+window.onscroll = () => {
+  document.getElementById('backTop').style.display = window.scrollY > 400 ? 'block' : 'none';
+}
+document.getElementById('backTop').onclick = () => window.scrollTo({top:0, behavior:'smooth'});
+</script>
 <section class="grid">
   <div class="card"><h3>Digital Literacy Training</h3><p>Helping individuals understand and use digital tools confidently.</p></div>
   <div class="card"><h3>Innovation Mentorship</h3><p>Guiding innovators and entrepreneurs to transform ideas into solutions.</p></div>

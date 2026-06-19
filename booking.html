@@ -14,7 +14,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Page Title Here</title>
+<button id="backTop" style="display:none; position:fixed; bottom:20px; right:20px; z-index:999; background:#2563eb; color:white; border:none; padding:12px; border-radius:50%; cursor:pointer">↑</button>
 
+<script>
+window.onscroll = () => {
+  document.getElementById('backTop').style.display = window.scrollY > 400 ? 'block' : 'none';
+}
+document.getElementById('backTop').onclick = () => window.scrollTo({top:0, behavior:'smooth'});
+</script>
 
   <h2>Book your Program</h2>
   
